@@ -5,5 +5,5 @@
 	<li><a href="registrazioneNuovoCliente.jsp">Nuovo cliente</a></li>
 	<li><a href="doElencoUtenti.jsp">Elenco Clienti</a></li>
 	<li><a href="registrazioneNuovoDipendente.jsp">Nuovo Dipendente</a></li>
-	<li><a href="#">Elenco Dipendenti</a></li>
+	<li><a href="doElencoDipendenti.jsp">Elenco Dipendenti</a></li>
 </ul>

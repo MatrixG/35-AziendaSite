@@ -42,7 +42,7 @@ public class Servizi {
 	}
 
 	// Restituisce tutti i Clienti nel DB
-	public List<Dipendente> getTuttiDipendente() {
+	public List<Dipendente> getTuttiDipendenti() {
 
 		return dDAO.getTuttiDipendenti();
 	}
