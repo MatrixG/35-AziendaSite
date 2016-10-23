@@ -1,0 +1,15 @@
+<%@page import = "com.alfasoft.service.Servizi"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
+    <%
+    
+    Servizi service = new Servizi();
+      
+    request.setAttribute("clienti", service.getTuttiClienti());
+    
+    %>
+    
+    <jsp:forward page="elencoUtenti.jsp">
+      <jsp:param value="" name=""/>
+    </jsp:forward>

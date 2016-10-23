@@ -3,7 +3,7 @@
 <ul>
 	<li><a href="homePageAdmin.jsp">HomePage</a></li>
 	<li><a href="registrazioneNuovoCliente.jsp">Nuovo cliente</a></li>
-	<li><a href="#">Elenco Clienti</a></li>
+	<li><a href="doElencoUtenti.jsp">Elenco Clienti</a></li>
 	<li><a href="#">Nuovo Dipendente</a></li>
 	<li><a href="#">Elenco Dipendenti</a></li>
 </ul>

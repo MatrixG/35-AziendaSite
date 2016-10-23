@@ -1,5 +1,8 @@
 package com.alfasoft.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import com.alfasoft.bean.Cliente;
@@ -25,11 +28,37 @@ public class ClienteDAO {
 			result = true;
 		
 		}catch (Exception e){
-			
+			tx.rollback();
 		}finally{
 			session.close();
 		}
 		
+		return result;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Cliente> getTuttiClienti() {
+
+		Session session = HibernateUtil.openSession();
+		
+		String hql = "FROM Cliente";
+		
+		Transaction tx = null;
+		List<Cliente> result = null;
+		
+		try {
+		
+			tx = session.getTransaction();
+			tx.begin();
+			Query query = session.createQuery(hql);
+			result = (List<Cliente>) query.list();
+			tx.commit();
+			
+		}catch (Exception e){
+			tx.rollback();
+		}finally{
+			session.close();
+		}
 		return result;
 	}
 }
