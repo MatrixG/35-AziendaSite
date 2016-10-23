@@ -2,6 +2,7 @@
     <wb-module deploy-name="35 AziendaSite">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/rubrica"/>
         <property name="context-root" value="35_AziendaSite"/>
         <property name="java-output-path" value="/35 AziendaSite/build/classes"/>
     </wb-module>
