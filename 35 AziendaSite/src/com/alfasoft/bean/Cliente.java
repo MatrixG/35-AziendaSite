@@ -7,6 +7,7 @@ import com.alfasoft.utils.CheckValues;
 @DiscriminatorValue (value = "Cliente")
 public class Cliente extends Utente implements IsValid {
 
+	private static final long serialVersionUID = 1L;
 	private String ragSociale;
 	private String pIva;
 	

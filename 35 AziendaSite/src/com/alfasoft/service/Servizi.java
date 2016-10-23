@@ -3,6 +3,8 @@ package com.alfasoft.service;
 import java.util.List;
 import com.alfasoft.bean.Cliente;
 import com.alfasoft.bean.Dipendente;
+import com.alfasoft.bean.Utente;
+import com.alfasoft.dao.UtenteDAO;
 import com.alfasoft.dao.ClienteDAO;
 import com.alfasoft.dao.DipendenteDAO;
 import com.alfasoft.utils.PSWEncoding;
@@ -20,6 +22,13 @@ public class Servizi {
 
 	ClienteDAO cDAO = new ClienteDAO();
 	DipendenteDAO dDAO = new DipendenteDAO();
+	UtenteDAO uDAO = new UtenteDAO();
+	
+	//Funzione che controlla il login degli utenti
+	public Utente loginUtente(Utente u){
+		
+		return uDAO.loginUtente(u);
+	}
 
 	// Effettua l'inserimento di un cliente nel DB
 	public boolean registraCliente(Cliente c) {
@@ -45,6 +54,12 @@ public class Servizi {
 	public List<Dipendente> getTuttiDipendenti() {
 
 		return dDAO.getTuttiDipendenti();
+	}
+	
+	//Check se lo username è già usato
+	public boolean checkUsername(String username) {
+		
+		return uDAO.checkUsername(username);
 	}
 
 	// Metodo per la cifratura della password

@@ -4,19 +4,31 @@
 
     
     
-    <jsp:useBean id = "utente" class = "com.alfasoft.bean.Cliente" scope = "request" />
-    <jsp:setProperty property = "*" name = "utente" />
+    <jsp:useBean id = "cliente" class = "com.alfasoft.bean.Cliente" scope = "request" />
+    <jsp:setProperty property = "*" name = "cliente" />
     
     <%
     
-    if (utente.isValid()){
+    if (cliente.isValid()){
     	
     	Servizi service = new Servizi();
-    	String psw = utente.getPassword();
-    	psw = service.convertiPsw(psw);
-    	utente.setPassword(psw);
     	
-    	if (service.registraCliente(utente)){
+//     	Setto lo username tutto minuscolo
+    	cliente.setUsername(cliente.getUsername().toLowerCase());
+    	String psw = cliente.getPassword();
+    	psw = service.convertiPsw(psw);
+    	cliente.setPassword(psw);
+    	
+//      Chech se username già utilizzato
+    	if (!service.checkUsername(cliente.getUsername())) {
+    		
+    		request.setAttribute("error", "2");
+    		%>
+    		<jsp:forward page="registrazioneNuovoCliente.jsp" />
+    		<%
+    	}
+    	
+    	if (service.registraCliente(cliente)){
     		%>
     		<jsp:forward page="clienteRegistrato.jsp" />
     		<%
@@ -27,5 +39,10 @@
     		<jsp:forward page="registrazioneNuovoCliente.jsp" />
     		<%
     	}
+    }else{
+    	request.setAttribute("error", "1");
+		%>
+		<jsp:forward page="registrazioneNuovoCliente.jsp" />
+		<%
     }
      %>

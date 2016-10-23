@@ -3,5 +3,5 @@
 <ul>
 	<li><a href="homePageDipendente.jsp">HomePage</a></li>
 	<li><a href="#">Nuovo Voce</a></li>
-	<li><a href="#">elenco contatti</a></li>
+	<li><a href="#">Elenco contatti</a></li>
 </ul>

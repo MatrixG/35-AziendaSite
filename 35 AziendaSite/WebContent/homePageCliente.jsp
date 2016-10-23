@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="Stylesheet" type="text/css" href="css/styles.css">
 
-<title>Home Dipendente</title>
+<title>Home Cliente</title>
 </head>
 <body>
 
@@ -20,11 +20,11 @@
 
 		<div class="menu">
 
-			<jsp:include page="menuLateraleDipendente.jsp"></jsp:include>
+			<jsp:include page="menuLateraleCliente.jsp"></jsp:include>
 
 		</div>
 		<div id="content">
-			<h1>Welcome to Dipendente HomePage</h1>
+			<h1>Welcome to Cliente HomePage</h1>
 		</div>
 		<div id="footer">
 			<h1>Footer</h1>

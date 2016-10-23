@@ -8,6 +8,7 @@ import com.alfasoft.utils.CheckValues;
 @DiscriminatorValue (value = "Dipente")
 public class Dipendente extends Utente implements IsValid  {
 	
+	private static final long serialVersionUID = 1L;
 	private int stipendio;
 	private String posizione;
 	

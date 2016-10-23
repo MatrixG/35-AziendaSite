@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="Stylesheet" type="text/css" href="css/styles.css">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <title>Admin</title>
 </head>
@@ -39,15 +40,19 @@
 				
 					
 			</form>
-			
-			
+				<%
+			if (request.getAttribute("error") != null){
+			%>		
+			<c:choose>
+				<c:when test="${error == 1}">
+       				<br>Errore nell'inserimento del Dipendente!
+    			</c:when>
+				<c:when test="${error == 2}">
+       				<br>Username già utilizzato
+   				</c:when>
+			</c:choose>
 			<%
-				if (request.getAttribute("error") != null && request.getAttribute("error").equals("1")) {
-					
-					%>
-					Errore nell'inserimento del Cliente!
-					<%
-				}
+			}
 			%>
 
 		</div>

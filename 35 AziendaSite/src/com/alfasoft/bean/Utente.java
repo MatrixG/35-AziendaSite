@@ -1,12 +1,15 @@
 package com.alfasoft.bean;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Inheritance (strategy = InheritanceType.JOINED)
 @DiscriminatorColumn (discriminatorType = DiscriminatorType.STRING)
-public class Utente {
+public class Utente implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	protected int id;
