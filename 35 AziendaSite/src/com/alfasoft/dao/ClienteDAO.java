@@ -8,7 +8,7 @@ import com.alfasoft.utils.HibernateUtil;
 public class ClienteDAO {
 
 	
-	
+	//Inserimento di un nuovo Cliente
 	public boolean creaCliente (Cliente c){
 		
 		Session session = HibernateUtil.openSession();
