@@ -4,6 +4,12 @@ import com.alfasoft.bean.Cliente;
 import com.alfasoft.dao.ClienteDAO;
 import com.alfasoft.utils.PSWEncoding;
 
+/* Legenda per i ruoli
+ * 
+ * 0 -> Admin
+ * 1 -> Dipendente
+ * 2 -> Cliente
+ */
 
 //La classe Servizi gestisce l'interfacciamento alla base dati
 public class Servizi {
@@ -13,6 +19,7 @@ public class Servizi {
 	//Effettua l'inserimento di un cliente nel DB
 	public boolean registraCliente(Cliente c){
 		
+			c.setRuolo('2');
 			return cDAO.creaCliente(c);
 	}
 	

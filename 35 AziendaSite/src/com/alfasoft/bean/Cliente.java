@@ -4,6 +4,7 @@ import javax.persistence.*;
 import com.alfasoft.utils.CheckValues;
 
 @Entity
+@DiscriminatorValue (value = "Cliente")
 public class Cliente extends Utente implements IsValid {
 
 	private String ragSociale;

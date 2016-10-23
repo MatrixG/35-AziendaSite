@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance (strategy = InheritanceType.JOINED)
+@DiscriminatorColumn (discriminatorType = DiscriminatorType.STRING)
 public class Utente {
 
 	@Id
