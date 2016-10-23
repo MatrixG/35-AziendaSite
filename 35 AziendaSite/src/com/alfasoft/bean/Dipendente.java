@@ -2,15 +2,19 @@ package com.alfasoft.bean;
 
 import javax.persistence.*;
 
+import com.alfasoft.rubrica.bean.Rubrica;
 import com.alfasoft.utils.CheckValues;
 
 @Entity
-@DiscriminatorValue (value = "Dipente")
+@DiscriminatorValue (value = "Dipendente")
 public class Dipendente extends Utente implements IsValid  {
 	
 	private static final long serialVersionUID = 1L;
 	private int stipendio;
 	private String posizione;
+	
+	@OneToOne
+	private Rubrica rubrica;
 	
 	public Dipendente() {
 		
@@ -39,6 +43,14 @@ public class Dipendente extends Utente implements IsValid  {
 
 	public void setPosizione(String posizione) {
 		this.posizione = posizione;
+	}
+	
+	public Rubrica getRubrica() {
+		return rubrica;
+	}
+
+	public void setRubrica(Rubrica rubrica) {
+		this.rubrica = rubrica;
 	}
 	
 	public boolean isValid() {

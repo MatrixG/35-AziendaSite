@@ -34,5 +34,7 @@
 		<mapping class="com.alfasoft.bean.Admin" />
 		<mapping class="com.alfasoft.bean.Cliente" />
 		<mapping class="com.alfasoft.bean.Dipendente" />
+		<mapping class="com.alfasoft.rubrica.bean.Voce" />
+		<mapping class="com.alfasoft.rubrica.bean.Rubrica" />
 	</session-factory>
 </hibernate-configuration>

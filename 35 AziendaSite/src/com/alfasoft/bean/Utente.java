@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance (strategy = InheritanceType.JOINED)
-@DiscriminatorColumn (discriminatorType = DiscriminatorType.STRING)
+//@DiscriminatorColumn (discriminatorType = DiscriminatorType.STRING)
 public class Utente implements Serializable {
 
 	private static final long serialVersionUID = 1L;

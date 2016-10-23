@@ -14,7 +14,7 @@ public class ServiziRubrica {
 	// Aggiungi rubrica
 	public boolean registraRubrica(String nome) {
 		boolean result = false;
-		Rubrica r = new Rubrica(nome);
+		Rubrica r = new Rubrica();
 
 		boolean b = rdao.creaRubrica(r);
 

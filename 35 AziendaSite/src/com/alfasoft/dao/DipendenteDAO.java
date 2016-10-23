@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import com.alfasoft.bean.Dipendente;
+import com.alfasoft.rubrica.bean.Rubrica;
 import com.alfasoft.utils.HibernateUtil;
 
 public class DipendenteDAO {
@@ -18,12 +19,14 @@ public class DipendenteDAO {
 		
 		Transaction tx = null;
 		boolean result = false;
-		
+		Rubrica r = new Rubrica();
+		d.setRubrica(r);
 		try {
 			
 			tx = session.getTransaction();
 			tx.begin();
 			session.persist(d);
+			session.persist(r);
 			tx.commit();
 			result = true;
 		
