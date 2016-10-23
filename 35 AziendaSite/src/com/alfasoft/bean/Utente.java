@@ -1,7 +1,13 @@
 package com.alfasoft.bean;
 
+import javax.persistence.*;
+
+@Entity
+@Inheritance (strategy = InheritanceType.JOINED)
 public class Utente {
 
+	@Id
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	protected int id;
 	protected String cognome;
 	protected String nome;

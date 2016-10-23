@@ -26,7 +26,7 @@
 		<div id="content">
 			<h1>Registrazione Nuovo Cliente</h1>
 			
-			<form action="do RegistrazioneCliente.jsp" method="post">
+			<form action="doRegistrazioneCliente.jsp" method="post">
 
 				Nome: <input type="text" name="nome" required /><br>
 				Cognome: <input type="text" name="cognome" required /><br>
@@ -39,6 +39,16 @@
 				
 					
 			</form>
+			
+			
+			<%
+				if (request.getAttribute("error") != null && request.getAttribute("error").equals("1")) {
+					
+					%>
+					Errore nell'inserimento del Cliente!
+					<%
+				}
+			%>
 
 		</div>
 		<div id="footer2">

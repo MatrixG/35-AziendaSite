@@ -1,7 +1,9 @@
 package com.alfasoft.bean;
 
+import javax.persistence.*;
 import com.alfasoft.utils.CheckValues;
 
+@Entity
 public class Cliente extends Utente implements IsValid {
 
 	private String ragSociale;
