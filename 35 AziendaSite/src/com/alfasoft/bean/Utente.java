@@ -10,7 +10,7 @@ public class Utente {
 	protected String password;
 	
 	
-	public Utente(){
+	public Utente() {
 		
 	}
 	
