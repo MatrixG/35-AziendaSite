@@ -13,7 +13,7 @@
 	<div id="Container">
 
 		<div id="header">
-			<h1>Header</h1>
+			<h1>Home Page Admin</h1>
 
 		</div>
 
@@ -24,9 +24,9 @@
 
 		</div>
 		<div id="content">
-			<h1>Welcom to Home Page</h1>
+			<h1>Welcome to Home Page</h1>
 		</div>
-		<div id="footer">
+		<div id="footer2">
 			<h1>Footer</h1>
 
 		</div>
