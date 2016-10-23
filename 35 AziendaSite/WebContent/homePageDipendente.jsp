@@ -1,3 +1,4 @@
+<%@ page import="com.alfasoft.bean.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -13,7 +14,8 @@
 	<div id="Container">
 
 		<div id="header">
-			<h1>Benvenuto <%= request.getAttribute("name") %></h1>
+			<% Utente u = (Utente)session.getAttribute("utente"); %>
+			<h1>Benvenuto <%= u.getNome() %></h1>
 
 		</div>
 

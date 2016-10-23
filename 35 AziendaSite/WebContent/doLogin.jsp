@@ -19,7 +19,8 @@
     	Utente u = service.loginUtente(utente);
     	if (u != null){
     		request.setAttribute("scelta", Character.getNumericValue(u.getRuolo()));
-    		request.setAttribute("name", u.getNome());
+    		session.setAttribute("utente", u);
+    		
     		%>
     		    <jsp:forward page="doChooseLogin.jsp"></jsp:forward>
     		<%

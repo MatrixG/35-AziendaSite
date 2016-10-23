@@ -1,10 +1,13 @@
 package com.alfasoft.rubrica.bean;
 
 import javax.persistence.Entity;
+import com.alfasoft.bean.IsValid;
+import com.alfasoft.utils.CheckValues;
+
 import javax.persistence.*;
 
 @Entity
-public class Voce {
+public class Voce implements IsValid {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -67,5 +70,13 @@ public class Voce {
 
 	public void setRubrica(Rubrica rubrica) {
 		this.rubrica = rubrica;
+	}
+
+	
+	public boolean isValid() {
+		if (CheckValues.checkString(nome) && CheckValues.checkString(cognome) &&
+				CheckValues.checkString(telefono))
+			return true;
+		return false;
 	}
 }
