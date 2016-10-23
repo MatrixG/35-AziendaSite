@@ -13,6 +13,8 @@ public class Cliente extends Utente implements IsValid {
 	public Cliente() {
 		
 		super();
+		ragSociale = "";
+		pIva = "";
 	}
 	
 	public Cliente(String ragSociale, String pIva) {

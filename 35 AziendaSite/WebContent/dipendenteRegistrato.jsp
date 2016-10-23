@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="Stylesheet" type="text/css" href="css/styles.css">
 
+
 <title>Admin Page</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
 
 		</div>
 		<div id="content">
-			<h1>Utente Creato</h1>
+			<h1>Dipendente Creato</h1>
 		</div>
 		<div id="footer2">
 			<h1>Footer</h1>

@@ -5,14 +5,14 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import com.alfasoft.bean.Cliente;
+import com.alfasoft.bean.Dipendente;
 import com.alfasoft.utils.HibernateUtil;
 
-public class ClienteDAO {
+public class DipendenteDAO {
 
 	
-	//Inserimento di un nuovo Cliente
-	public boolean creaCliente (Cliente c){
+	//Inserimento di un nuovo Dipendente
+	public boolean creaDipendente (Dipendente d){
 		
 		Session session = HibernateUtil.openSession();
 		
@@ -23,7 +23,7 @@ public class ClienteDAO {
 			
 			tx = session.getTransaction();
 			tx.begin();
-			session.persist(c);
+			session.persist(d);
 			tx.commit();
 			result = true;
 		
@@ -36,23 +36,23 @@ public class ClienteDAO {
 		return result;
 	}
 	
-	//Resituisce la lista dei Clienti
+	//Resituisce la lista dei Dipendenti
 	@SuppressWarnings("unchecked")
-	public List<Cliente> getTuttiClienti() {
+	public List<Dipendente> getTuttiDipendenti() {
 
 		Session session = HibernateUtil.openSession();
 		
-		String hql = "FROM Cliente";
+		String hql = "FROM Dipendente";
 		
 		Transaction tx = null;
-		List<Cliente> result = null;
+		List<Dipendente> result = null;
 		
 		try {
 		
 			tx = session.getTransaction();
 			tx.begin();
 			Query query = session.createQuery(hql);
-			result = (List<Cliente>) query.list();
+			result = (List<Dipendente>) query.list();
 			tx.commit();
 			
 		}catch (Exception e){

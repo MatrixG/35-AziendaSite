@@ -19,6 +19,12 @@ public class Utente {
 	
 	public Utente() {
 		
+		id = 0;
+		cognome = "";
+		nome = "";
+		ruolo = '3';
+		username = "";
+		password = "";
 	}
 	
 	public Utente(String cognome, String nome, char ruolo, String username, String password) {

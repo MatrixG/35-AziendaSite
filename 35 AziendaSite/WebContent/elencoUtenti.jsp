@@ -1,5 +1,4 @@
 <%@ page import = "com.alfasoft.bean.Cliente" %>
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -29,13 +28,14 @@
 		<div id="content">
 			<h1>Elenco utenti</h1>
 
-	<table border="1px">
-<%-- 	${nomeBean.nomeattributo} --%>
+	<table border="1px" align="center">
 
 		<thead>
 
 			<tr>
               <th>Nome</th> <th>Cognome</th>
+              <th>Username</th> <th>Partita IVA</th>
+              <th>Ragione Sociale</th>
 			</tr>
 
 		</thead>
@@ -47,6 +47,15 @@
 	        </td> 
 	        <td>
 	        ${c.cognome}
+	        </td>
+	        <td>
+	        ${c.username}
+	        </td>
+	        <td>
+	        ${c.pIva}
+	        </td>
+	        <td>
+	        ${c.ragSociale}
 	        </td>
 	        </tr>
 	     </c:forEach>
