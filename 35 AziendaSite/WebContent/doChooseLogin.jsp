@@ -22,7 +22,7 @@
 	<c:choose>
 		<c:when test="${scelta == 0}">
 			<%
-			Utente u = (Utente) session.getAttribute("utente"); 
+			Utente u = (Utente) session.getAttribute("utente");
 			u = (Utente) service.riempiUtente(u.getUsername(), (Integer)request.getAttribute("scelta"));
 			session.setAttribute("utente", u);
 			%>
@@ -30,7 +30,7 @@
    		</c:when>
 		<c:when test="${scelta == 1}">
 			<%
-			Utente u = (Utente) session.getAttribute("utente"); 
+			Utente u = (Utente) session.getAttribute("utente");
 			Dipendente d =(Dipendente) service.riempiUtente(u.getUsername(), (Integer)request.getAttribute("scelta"));
 			session.setAttribute("utente", d);
 			%>
@@ -38,12 +38,18 @@
     	</c:when>
     	<c:when test="${scelta == 2}">
     		<%
-			Utente u = (Utente) session.getAttribute("utente"); 
+			Utente u = (Utente) session.getAttribute("utente");
 			Cliente c =(Cliente) service.riempiUtente(u.getUsername(), (Integer)request.getAttribute("scelta"));
 			session.setAttribute("utente", c);
 			%>
 			<jsp:forward page="cliente/homePageCliente.jsp"></jsp:forward>
     	</c:when>
+    	<c:otherwise>
+    		<%
+    		request.setAttribute("error", "1");
+		    %>
+		    <jsp:forward page="login.jsp"></jsp:forward>
+    	</c:otherwise>
 	</c:choose>
 </body>
 </html>

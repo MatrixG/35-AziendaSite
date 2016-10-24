@@ -47,7 +47,7 @@ public class Servizi {
 	// Effettua l'inserimento di un cliente nel DB
 	public boolean registraCliente(Cliente c) {
 
-		c.setRuolo('2');
+		c.setRuolo(2);
 		return cDAO.creaCliente(c);
 	}
 
@@ -60,7 +60,7 @@ public class Servizi {
 	// Effettua l'inserimento di un dipendente nel DB
 	public boolean registraDipendente(Dipendente d) {
 
-		d.setRuolo('1');
+		d.setRuolo(1);
 		return dDAO.creaDipendente(d);
 	}
 

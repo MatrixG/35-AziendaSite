@@ -4,8 +4,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <c:choose>
-  <c:when test="${cliente.isValid() == true}">
-
+  <c:when test="${utente.isValid()}">
+  	<c:when test="${utente.getRuolo()} == 2">
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,7 +21,7 @@
 <%-- 		<%Cliente c = (Cliente) session.getAttribute("cliente"); %> <%= c.getNome()  %> --%>
 		
 		<div id="header">
-			<h1>Benvenuto <c:out value="${cliente.getNome()}"></c:out></h1>
+			<h1>Benvenuto <c:out value=" ${utente.getNome()}"></c:out></h1>
 
 		</div>
 
@@ -43,6 +44,7 @@
 	<!--  end of container -->
 </body>
 </html>
+	</c:when>
  </c:when>
 <c:otherwise>
     

@@ -31,7 +31,7 @@
 
 				Nome: <input type="text" name="nome" required /><br>
 				Cognome: <input type="text" name="cognome" required /><br>
-				Stipendio: <input type="number" name="stipendio" /><br>
+				Stipendio: <input type="text" name="stipendio" /><br>
 				Posizione: <input type="text" name="posizione" required /><br>
 				Username: <input type="text" name="username" required /><br>
 				Password: <input type="password" name="password" required /><br>

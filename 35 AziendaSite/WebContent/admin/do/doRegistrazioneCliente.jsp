@@ -16,6 +16,7 @@
 //     	Setto lo username tutto minuscolo
     	cliente.setUsername(cliente.getUsername().toLowerCase());
     	String psw = cliente.getPassword();
+//		Conversione della password
     	psw = service.convertiPsw(psw);
     	cliente.setPassword(psw);
     	

@@ -16,7 +16,7 @@
     	utente.setPassword(psw);
     	Utente u = service.loginUtente(utente);
     	if (u != null){
-    		request.setAttribute("scelta", Character.getNumericValue(u.getRuolo()));
+    		request.setAttribute("scelta", u.getRuolo());
     		%>
     		    <jsp:forward page="doChooseLogin.jsp"></jsp:forward>
     		<%
