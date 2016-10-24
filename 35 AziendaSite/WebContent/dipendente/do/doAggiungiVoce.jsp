@@ -16,11 +16,11 @@
     	
     	//if (service.aggiungiVoce(voce, ((Utente)session.getAttribute("utente")).getId()){
     		%>
-    		<jsp:forward page="voceAggiunta.jsp" />
+    		<jsp:forward page="../voceAggiunta.jsp" />
     		<%
     	}
    // }
     	
     	request.setAttribute("error", "1");
 		%>
-		<jsp:forward page="registrazioneNuovoCliente.jsp" />
+		<jsp:forward page="../nuovaVoceRubrica.jsp" />

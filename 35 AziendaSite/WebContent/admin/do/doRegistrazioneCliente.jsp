@@ -32,17 +32,10 @@
     		%>
     		<jsp:forward page="../clienteRegistrato.jsp" />
     		<%
-    	}else{
-    		
-    		request.setAttribute("error", "1");
-    		%>
-    		<jsp:forward page="../registrazioneNuovoCliente.jsp" />
-    		<%
-    	}
-    }else{
-    	request.setAttribute("error", "1");
-		%>
-		<jsp:forward page="../registrazioneNuovoCliente.jsp" />
-		<%
+    	}	
     }
-     %>
+    
+    request.setAttribute("error", "1");
+	%>
+	<jsp:forward page="../registrazioneNuovoCliente.jsp" />
+		
