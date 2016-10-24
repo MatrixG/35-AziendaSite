@@ -22,7 +22,7 @@
 
 		<div class="menu">
 
-			<jsp:include page="menuLateraleCliente.jsp"></jsp:include>
+			<jsp:include page="menu/menuLateraleCliente.jsp"></jsp:include>
 
 		</div>
 		<div id="content">

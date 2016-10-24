@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="Stylesheet" type="text/css" href="../css/styles.css">
+<link rel="Stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <title>Aggiungi una Voce</title>
