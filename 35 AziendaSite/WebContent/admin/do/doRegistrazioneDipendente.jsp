@@ -24,25 +24,25 @@
     		
     		request.setAttribute("error", "2");
     		%>
-    		<jsp:forward page="registrazioneNuovoDipendente.jsp" />
+    		<jsp:forward page="../registrazioneNuovoDipendente.jsp" />
     		<%
     	}
     	
     	if (service.registraDipendente(dipendente)){
     		%>
-    		<jsp:forward page="dipendenteRegistrato.jsp" />
+    		<jsp:forward page="../dipendenteRegistrato.jsp" />
     		<%
     	}else{
     		
     		request.setAttribute("error", "1");
     		%>
-    		<jsp:forward page="registrazioneNuovoDipendente.jsp" />
+    		<jsp:forward page="../registrazioneNuovoDipendente.jsp" />
     		<%
     	}
     }else{
     	request.setAttribute("error", "1");
 		%>
-		<jsp:forward page="registrazioneNuovoDipendente.jsp" />
+		<jsp:forward page="../registrazioneNuovoDipendente.jsp" />
 		<%
     }
      %>

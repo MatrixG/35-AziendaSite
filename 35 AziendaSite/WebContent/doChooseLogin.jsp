@@ -12,13 +12,13 @@
 	
 	<c:choose>
 		<c:when test="${scelta == 0}">
-       		<jsp:forward page="homePageAdmin.jsp"></jsp:forward>
+       		<jsp:forward page="admin/homePageAdmin.jsp"></jsp:forward>
    		</c:when>
 		<c:when test="${scelta == 1}">
-			<jsp:forward page="homePageDipendente.jsp"></jsp:forward>
+			<jsp:forward page="dipendente/homePageDipendente.jsp"></jsp:forward>
     	</c:when>
     	<c:when test="${scelta == 2}">
-			<jsp:forward page="homePageCliente.jsp"></jsp:forward>
+			<jsp:forward page="cliente/homePageCliente.jsp"></jsp:forward>
     	</c:when>
 	</c:choose>
 </body>

@@ -27,7 +27,7 @@
 		<div id="content">
 			<h1>Registrazione Nuovo Dipendente</h1>
 			
-			<form action="doRegistrazioneDipendente.jsp" method="post">
+			<form action="do/doRegistrazioneDipendente.jsp" method="post">
 
 				Nome: <input type="text" name="nome" required /><br>
 				Cognome: <input type="text" name="cognome" required /><br>
