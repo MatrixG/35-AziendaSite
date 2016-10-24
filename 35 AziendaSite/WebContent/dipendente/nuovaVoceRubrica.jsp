@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="Stylesheet" type="text/css" href="../css/styles.css">
+<link rel="Stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <title>Aggiungi una contatto</title>
@@ -27,7 +27,7 @@
 		<div id="content">
 			<h1>Aggiungi un contatto</h1>
 
-			<form action="doAggiungiVoce.jsp" method="post">
+			<form action="do/doAggiungiVoce.jsp" method="post">
 
 				Nome: <input type="text" name="nome" required /><br> 
 				Cognome: <input type="text" name="cognome" /><br> 
