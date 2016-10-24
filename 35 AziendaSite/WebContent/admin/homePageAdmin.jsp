@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%-- <% if () %> --%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="Stylesheet" type="text/css" href="css/styles.css">
-
+<link rel="Stylesheet" type="text/css" href="../css/styles.css">
 
 <title>Admin Page</title>
 </head>
@@ -21,11 +23,11 @@
 
 		<div class="menu">
 
-			<jsp:include page="menuLateraleAdmin.jsp"></jsp:include>
+			<jsp:include page="menu/menuLateraleAdmin.jsp"></jsp:include>
 
 		</div>
 		<div id="content">
-			<h1>Dipendente Creato</h1>
+			<h1>Welcome to Home Page</h1>
 		</div>
 		<div id="footer2">
 			<h1>Footer</h1>

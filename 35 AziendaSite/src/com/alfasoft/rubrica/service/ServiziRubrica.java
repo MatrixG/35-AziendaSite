@@ -31,7 +31,7 @@ public class ServiziRubrica {
 
 		Voce v = new Voce(nome, cognome, telefono);
 		v.setRubrica(r);
-		r.addVoce(v);
+//		r.addVoce(v);
 		boolean b = vdao.aggiungiVoce(v);
 		rdao.aggiornaRubrica(r);
 

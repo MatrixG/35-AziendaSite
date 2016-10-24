@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="Stylesheet" type="text/css" href="css/styles.css">
+<link rel="Stylesheet" type="text/css" href="../../css/styles.css">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 
 <title>Admin Page</title>
@@ -22,7 +22,7 @@
 
 		<div class="menu">
 
-			<jsp:include page="menuLateraleAdmin.jsp"></jsp:include>
+			<jsp:include page="menu/menuLateraleAdmin.jsp"></jsp:include>
 
 		</div>
 		<div id="content">

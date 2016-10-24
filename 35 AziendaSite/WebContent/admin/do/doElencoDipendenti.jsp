@@ -10,6 +10,6 @@
     
     %>
     
-    <jsp:forward page="elencoDipendenti.jsp">
+    <jsp:forward page="../elencoDipendenti.jsp">
       <jsp:param value="" name=""/>
     </jsp:forward>

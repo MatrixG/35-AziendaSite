@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="Stylesheet" type="text/css" href="css/styles.css">
+<link rel="Stylesheet" type="text/css" href="../../css/styles.css">
 
 <title>Admin Page</title>
 </head>
@@ -20,7 +20,7 @@
 
 		<div class="menu">
 
-			<jsp:include page="menuLateraleAdmin.jsp"></jsp:include>
+			<jsp:include page="menu/menuLateraleAdmin.jsp"></jsp:include>
 
 		</div>
 		<div id="content">

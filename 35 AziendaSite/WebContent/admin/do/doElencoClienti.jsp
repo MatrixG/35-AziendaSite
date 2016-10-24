@@ -10,6 +10,6 @@
     
     %>
     
-    <jsp:forward page="elencoUtenti.jsp">
+    <jsp:forward page="../elencoClienti.jsp">
       <jsp:param value="" name=""/>
     </jsp:forward>
