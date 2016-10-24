@@ -23,7 +23,7 @@ public class UtenteDAO {
 				Query query = session.createQuery(hql);
 				query.setParameter("username", u.getUsername());
 				query.setParameter("password", u.getPassword());
-				result = (Utente) query.uniqueResult();
+				result = (Utente)query.uniqueResult();
 				tx.commit();
 			
 			}catch (Exception e){
@@ -59,6 +59,32 @@ public class UtenteDAO {
 				}
 				return result;
 			}
-		
 
+		//leggo un utente con lo username
+		public Object leggiUtente(String username) {
+
+			Session session = HibernateUtil.openSession();
+			
+			Transaction tx = null;
+			Utente result = null;
+			String hql = "FROM Utente Where username = :username";
+			
+			try {
+				
+				tx = session.getTransaction();
+				tx.begin();
+				Query query = session.createQuery(hql);
+				query.setParameter("username", username);
+				result = (Utente) query.uniqueResult();
+				tx.commit();
+				
+			
+			}catch (Exception e){
+				tx.rollback();
+			}finally{
+				session.close();
+			}
+			
+			return result;
+		}
 }

@@ -24,6 +24,20 @@ public class Servizi {
 	DipendenteDAO dDAO = new DipendenteDAO();
 	UtenteDAO uDAO = new UtenteDAO();
 	
+	// Metodo utile per riempire i campi di un Utente
+	public Object riempiUtente(String username, int ruolo){
+		
+		switch (ruolo) {
+		case 0:
+			return (Object)uDAO.leggiUtente(username);
+		case 1:
+			return (Object)dDAO.leggiDipendente(username);
+		case 2:
+			return (Object)cDAO.leggiCliente(username);
+		}
+		return null;
+	}
+	
 	//Funzione che controlla il login degli utenti
 	public Utente loginUtente(Utente u){
 		

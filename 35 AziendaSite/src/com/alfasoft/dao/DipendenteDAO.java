@@ -65,4 +65,30 @@ public class DipendenteDAO {
 		}
 		return result;
 	}
+
+	public Dipendente leggiDipendente(String username) {
+
+		Session session = HibernateUtil.openSession();
+		
+		Transaction tx = null;
+		Dipendente result = null;
+		String hql = "FROM Dipendente Where username = :username";
+		
+		try {
+			
+			tx = session.getTransaction();
+			tx.begin();
+			Query query = session.createQuery(hql);
+			query.setParameter("username", username);
+			result = (Dipendente) query.uniqueResult();
+			tx.commit();
+			
+		
+		}catch (Exception e){
+			tx.rollback();
+		}finally{
+			session.close();
+		}
+		return result;
+	}
 }
