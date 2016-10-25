@@ -4,8 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <c:choose>
-  <c:when test="${utente.isValid()}">
-  	<c:when test="${utente.getRuolo()} == 2">
+  <c:when test="${utente.isValid() && utente.getRuolo() == 2}">
 	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -44,9 +43,9 @@
 	<!--  end of container -->
 </body>
 </html>
-	</c:when>
+
  </c:when>
 <c:otherwise>
-    
+	<c:redirect url="../sessioneScaduta.jsp"></c:redirect>
   </c:otherwise>
 </c:choose>

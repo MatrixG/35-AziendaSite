@@ -3,4 +3,5 @@
 <ul>
 	<li><a href="${pageContext.request.contextPath}/cliente/homePageCliente.jsp">HomePage</a></li>
 	<li><a href="#">Elenco Ordini</a></li>
+	<li><a href="${pageContext.request.contextPath}/doLogout.jsp">Logout</a></li>
 </ul>
