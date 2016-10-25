@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html >
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -10,14 +11,12 @@
 <title>Admin</title>
 </head>
 <body>
-
 	<div id="Container">
 
 		<div id="header">
 			<h1>Home Page Admin</h1>
 
 		</div>
-
 
 		<div class="menu">
 
@@ -60,9 +59,6 @@
 			<h1>Footer</h1>
 
 		</div>
-
-
 	</div>
-	<!--  end of container -->
 </body>
 </html>
