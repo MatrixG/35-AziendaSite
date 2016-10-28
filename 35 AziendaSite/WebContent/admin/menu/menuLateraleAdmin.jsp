@@ -6,4 +6,5 @@
 	<li><a href="${pageContext.request.contextPath}/admin/do/doElencoClienti.jsp">Elenco Clienti</a></li>
 	<li><a href="${pageContext.request.contextPath}/admin/registrazioneNuovoDipendente.jsp">Nuovo Dipendente</a></li>
 	<li><a href="${pageContext.request.contextPath}/admin/do/doElencoDipendenti.jsp">Elenco Dipendenti</a></li>
+	<li><a href="${pageContext.request.contextPath}/doLogout.jsp">Logout</a></li>
 </ul>

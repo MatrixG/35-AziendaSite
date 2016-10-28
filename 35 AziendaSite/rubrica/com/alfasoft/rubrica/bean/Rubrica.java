@@ -1,10 +1,8 @@
 package com.alfasoft.rubrica.bean;
 
-import java.util.HashSet;
-import java.util.Set;
+
 import javax.persistence.*;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
+
 
 @Entity
 public class Rubrica {
@@ -15,10 +13,9 @@ public class Rubrica {
 	
 //	@OneToMany (mappedBy = "id", fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 //	@NotFound(action=NotFoundAction.IGNORE)
-//	private Set<Voce> voci;
+//	private Set<Voce> voci = new HashSet<Voce>();
 
-	public Rubrica() {
-//		voci = new HashSet<Voce>();
+	public Rubrica() { 
 	}
 
 	public int getIdRubrica() {
